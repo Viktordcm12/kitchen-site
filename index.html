@@ -1,13 +1,76 @@
-<section id="calc">
-  <h2>Онлайн-расчёт стоимости</h2>
-  <form action="https://formspree.io/f/mayrklbp" method="POST">
-    <label>Тип кухни:
-      <select name="Тип кухни"><option>Прямая</option><option>Угловая</option><option>П-образная</option></select>
-    </label>
-    <label>Размер (примерно):<input name="Размер" type="text" placeholder="например 2.5 x 3 м"></label>
-    <label>Фасады:<select name="Фасады"><option>Матовые</option><option>Глянец</option><option>Пластик</option></select></label>
-    <label>Телефон:<input name="Телефон" type="tel" placeholder="+7..." required></label>
-    <label>Комментарий:<textarea name="Комментарий" placeholder="Опишите ваши пожелания..."></textarea></label>
-    <button type="submit">Получить расчёт</button>
-  </form>
-</section>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Кухни Ассорти – кухни на заказ в Екатеринбурге</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #fefefe; color: #222; line-height: 1.6; }
+    header, section, footer { padding: 60px 20px; max-width: 1100px; margin: auto; }
+    header { background: #fafafa; text-align: center; border-bottom: 1px solid #ddd; }
+    h1, h2 { margin-bottom: 20px; font-weight: 700; }
+    p.lead { font-size: 1.2em; color: #555; }
+    .buttons { margin-top: 30px; }
+    .buttons a { display: inline-block; margin: 10px; padding: 14px 28px; background: #000; color: #fff; text-decoration: none; border-radius: 6px; font-weight: bold; }
+    .gallery { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+    .gallery img { width: 30%; min-width: 280px; border-radius: 8px; box-shadow: 0 0 8px rgba(0,0,0,0.1); }
+    .reviews blockquote { font-style: italic; margin-bottom: 30px; border-left: 4px solid #ccc; padding-left: 14px; color: #555; }
+    form input, form textarea, form select { width: 100%; margin: 10px 0; padding: 12px; border-radius: 4px; border: 1px solid #ccc; font-size: 1em; }
+    form button { padding: 12px 24px; background: #000; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-size: 1em; }
+    footer { background: #f8f8f8; font-size: 14px; text-align: center; color: #666; border-top: 1px solid #ddd; margin-top: 60px; padding: 40px 20px; }
+    a[href^="tel:"], a[href^="mailto:"] { color: #000; text-decoration: none; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Кухни под заказ с инженерным подходом</h1>
+    <p class="lead">Индивидуальные проекты в Екатеринбурге: точность, практичность, надёжность</p>
+    <div class="buttons">
+      <a href="#calc">📐 Рассчитать кухню</a>
+      <a href="https://wa.me/79826289024">💬 WhatsApp: +7 (982) 628-90-24</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>Наши кухни</h2>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1601979031925-5780fd524e4e" alt="кухня 1">
+      <img src="https://images.unsplash.com/photo-1613482184804-e7e2827cb5c2" alt="кухня 2">
+      <img src="https://images.unsplash.com/photo-1621947391907-fd9f0e6dba67" alt="кухня 3">
+    </div>
+  </section>
+
+  <section>
+    <h2>Отзывы клиентов</h2>
+    <blockquote>«Кухня вышла именно такой, как мы мечтали. Спасибо за честность и подход!» — Анна</blockquote>
+    <blockquote>«Все было чётко, с замером, доставкой и монтажом. И по цене — адекватно!» — Сергей</blockquote>
+    <blockquote>«Мои нестандартные размеры не стали проблемой — всё учли до миллиметра!» — Ольга</blockquote>
+  </section>
+
+  <section id="calc">
+    <h2>Онлайн-расчёт стоимости</h2>
+    <form action="https://formspree.io/f/xqkrnjwk" method="POST">
+      <label>Тип кухни:
+        <select name="Тип кухни"><option>Прямая</option><option>Угловая</option><option>П-образная</option></select>
+      </label>
+      <label>Размер (примерно):<input name="Размер" type="text" placeholder="например 2.5 x 3 м"></label>
+      <label>Фасады:<select name="Фасады"><option>Матовые</option><option>Глянец</option><option>Пластик</option></select></label>
+      <label>Телефон:<input name="Телефон" type="tel" placeholder="+7..." required></label>
+      <label>Комментарий:<textarea name="Комментарий" placeholder="Опишите ваши пожелания..."></textarea></label>
+      <button type="submit">Получить расчёт</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>О нас</h2>
+    <p>«Кухни Ассорти» — семейная мастерская в Екатеринбурге. Основатель — инженер с 20-летним стажем. Мы не просто продаём кухни — мы проектируем их как технику: по размерам, по логике, под стиль жизни. Без посредников и переплат.</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Кухни Ассорти</p>
+    <p>Телефон: <a href="tel:+79826289024">+7 (982) 628-90-24</a></p>
+    <p>Email: <a href="mailto:assorti-ekb@bk.ru">assorti-ekb@bk.ru</a></p>
+    <p>Адрес: ТЦ «Гулливер», Екатеринбург</p>
+  </footer>
+</body>
+</html>
