@@ -1,71 +1,13 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Кухни Ассорти – кухни на заказ в Екатеринбурге</title>
-  <style>
-    body { margin: 0; font-family: sans-serif; background: #fff; color: #222; line-height: 1.6; }
-    header, section, footer { padding: 40px 20px; max-width: 900px; margin: auto; }
-    header { background: #f0f0f0; text-align: center; }
-    h1, h2 { margin-bottom: 10px; }
-    .buttons { margin-top: 20px; }
-    .buttons a { display: inline-block; margin: 10px; padding: 12px 20px; background: #000; color: #fff; text-decoration: none; border-radius: 4px; }
-    .gallery img { width: 30%; margin: 1%; border-radius: 4px; }
-    .reviews blockquote { font-style: italic; margin-bottom: 20px; border-left: 4px solid #ccc; padding-left: 12px; }
-    form input, form textarea, form select { width: 100%; margin: 10px 0; padding: 10px; }
-    form button { padding: 10px 20px; background: #000; color: #fff; border: none; cursor: pointer; }
-    footer { background: #f9f9f9; font-size: 14px; text-align: center; }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Кухни под заказ с инженерным подходом</h1>
-    <p>Изготавливаем кухни в Екатеринбурге точно под размеры — без переплат, напрямую от мастера</p>
-    <div class="buttons">
-      <a href="#calc">📐 Рассчитать кухню</a>
-      <a href="https://wa.me/79191234567">💬 Написать в WhatsApp</a>
-    </div>
-  </header>
-
-  <section>
-    <h2>Примеры наших работ</h2>
-    <div class="gallery">
-      <img src="https://images.unsplash.com/photo-1601979031925-5780fd524e4e" alt="кухня 1">
-      <img src="https://images.unsplash.com/photo-1613482184804-e7e2827cb5c2" alt="кухня 2">
-      <img src="https://images.unsplash.com/photo-1621947391907-fd9f0e6dba67" alt="кухня 3">
-    </div>
-  </section>
-
-  <section>
-    <h2>Отзывы клиентов</h2>
-    <blockquote>«Спасибо за честность и точность. Сделали быстро и красиво!» — Татьяна</blockquote>
-    <blockquote>«Мой холодильник, колонка и плита встали идеально. Спасибо!» — Павел</blockquote>
-    <blockquote>«Кухня аккуратная и практичная. Как будто для себя делали!» — Ирина</blockquote>
-  </section>
-
-  <section id="calc">
-    <h2>Быстрый расчёт стоимости</h2>
-    <form>
-      <label>Тип кухни:
-        <select><option>Прямая</option><option>Угловая</option><option>П-образная</option></select>
-      </label>
-      <label>Размер (примерно):<input type="text" placeholder="например 2.5 x 3 м"></label>
-      <label>Фасады:<select><option>Матовые</option><option>Глянец</option><option>Пластик</option></select></label>
-      <label>Телефон:<input type="tel" placeholder="+7..." required></label>
-      <label>Комментарий:<textarea placeholder="Опишите ваши пожелания..."></textarea></label>
-      <button type="submit">Получить расчёт</button>
-    </form>
-  </section>
-
-  <section>
-    <h2>О компании</h2>
-    <p>«Кухни Ассорти» — это семейная мастерская в Екатеринбурге. Основатель — инженер с 20-летним стажем. Мы проектируем и изготавливаем кухни, как для себя: надёжно, грамотно, по-честному.</p>
-  </section>
-
-  <footer>
-    <p>© 2025 Кухни Ассорти, Екатеринбург</p>
-    <p>Контакты: +7 (919) XXX-XX-XX · assorti@example.ru · ТЦ Гулливер</p>
-  </footer>
-</body>
-</html>
+<section id="calc">
+  <h2>Онлайн-расчёт стоимости</h2>
+  <form action="https://formspree.io/f/mayrklbp" method="POST">
+    <label>Тип кухни:
+      <select name="Тип кухни"><option>Прямая</option><option>Угловая</option><option>П-образная</option></select>
+    </label>
+    <label>Размер (примерно):<input name="Размер" type="text" placeholder="например 2.5 x 3 м"></label>
+    <label>Фасады:<select name="Фасады"><option>Матовые</option><option>Глянец</option><option>Пластик</option></select></label>
+    <label>Телефон:<input name="Телефон" type="tel" placeholder="+7..." required></label>
+    <label>Комментарий:<textarea name="Комментарий" placeholder="Опишите ваши пожелания..."></textarea></label>
+    <button type="submit">Получить расчёт</button>
+  </form>
+</section>
