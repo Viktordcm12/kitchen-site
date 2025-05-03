@@ -4,21 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Кухни Ассорти – кухни на заказ в Екатеринбурге</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: 'Montserrat', sans-serif;
-      background: #fdfdfd;
+      background: #fffefc;
       color: #222;
-    }
-    header, section, footer {
-      padding: 60px 20px;
-      max-width: 1100px;
-      margin: auto;
     }
     nav {
       background: #000;
@@ -37,12 +30,21 @@
       text-decoration: none;
       font-weight: 600;
     }
-    .fade-in {
-      animation: fadeIn 1.2s ease-in;
+    header, section, footer {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
     }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    header {
+      text-align: center;
+      background: linear-gradient(120deg, #fff 0%, #f2f2f2 100%);
+      border-bottom: 1px solid #ddd;
+    }
+    .hero-img {
+      max-width: 100%;
+      margin-top: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
     }
     h1, h2 {
       font-weight: 700;
@@ -66,16 +68,14 @@
       font-weight: bold;
     }
     .gallery {
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
-      justify-content: center;
     }
     .gallery img {
-      width: 30%;
-      min-width: 280px;
-      border-radius: 8px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
       transition: transform 0.3s ease;
     }
     .gallery img:hover {
@@ -133,35 +133,36 @@
   </div>
 </nav>
 
-<header class="fade-in">
-  <h1>Кухни под заказ с инженерным подходом</h1>
-  <p class="lead">Индивидуальные проекты в Екатеринбурге: точность, практичность, надёжность</p>
+<header>
+  <h1>Индивидуальные кухни под заказ</h1>
+  <p class="lead">Инженерный подход. Честная цена. Екатеринбург</p>
+  <img class="hero-img" src="https://images.unsplash.com/photo-1595526114035-45b6a9d8d6d2" alt="Главная кухня">
   <div class="buttons">
     <a href="#calc">📐 Рассчитать кухню</a>
     <a href="https://wa.me/79826289024">💬 WhatsApp</a>
   </div>
 </header>
 
-<section id="gallery" class="fade-in">
-  <h2>Наши кухни</h2>
+<section id="gallery">
+  <h2>Наши проекты</h2>
   <div class="gallery">
     <img src="https://images.unsplash.com/photo-1601979031925-5780fd524e4e" alt="кухня 1">
     <img src="https://images.unsplash.com/photo-1613482184804-e7e2827cb5c2" alt="кухня 2">
     <img src="https://images.unsplash.com/photo-1621947391907-fd9f0e6dba67" alt="кухня 3">
     <img src="https://images.unsplash.com/photo-1618221199411-b62aef1d6c8e" alt="кухня 4">
     <img src="https://images.unsplash.com/photo-1588854337221-c1525f8f60f5" alt="кухня 5">
+    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="кухня 6">
   </div>
 </section>
 
-<section class="fade-in">
-  <h2>Отзывы клиентов</h2>
-  <blockquote>«Кухня вышла именно такой, как мы мечтали. Спасибо за честность и подход!» — Анна</blockquote>
-  <blockquote>«Все было чётко, с замером, доставкой и монтажом. И по цене — адекватно!» — Сергей</blockquote>
-  <blockquote>«Мои нестандартные размеры не стали проблемой — всё учли до миллиметра!» — Ольга</blockquote>
+<section>
+  <h2>Отзывы</h2>
+  <blockquote>«Очень понравилось, как всё чётко и грамотно рассчитано. Кухня не просто красивая, а удобная.» — Наталья</blockquote>
+  <blockquote>«Спасибо за честную цену, нормальное отношение и понятные сроки. Всё понравилось.» — Дмитрий</blockquote>
 </section>
 
-<section id="calc" class="fade-in">
-  <h2>Онлайн-расчёт стоимости</h2>
+<section id="calc">
+  <h2>Рассчитать стоимость кухни</h2>
   <form action="https://formspree.io/f/xqkrnjwk" method="POST">
     <label>Тип кухни:
       <select name="Тип кухни"><option>Прямая</option><option>Угловая</option><option>П-образная</option></select>
@@ -174,9 +175,9 @@
   </form>
 </section>
 
-<section id="about" class="fade-in">
+<section id="about">
   <h2>О нас</h2>
-  <p>«Кухни Ассорти» — семейная мастерская в Екатеринбурге. Основатель — инженер с 20-летним стажем. Мы не просто продаём кухни — мы проектируем их как технику: по размерам, по логике, под стиль жизни. Без посредников и переплат.</p>
+  <p>Наша компания — это семейная мастерская с инженерным подходом. Мы не просто продаём кухни — мы проектируем решения, которые будут служить вам годами. Каждый проект — под размеры, под стиль жизни, под человека. Без переплат. С душой.</p>
 </section>
 
 <footer id="contacts">
