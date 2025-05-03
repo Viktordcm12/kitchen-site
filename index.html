@@ -10,13 +10,13 @@
     body {
       margin: 0;
       font-family: 'Montserrat', sans-serif;
-      background: #fffefc;
+      background: #fffdf9;
       color: #222;
     }
     nav {
       background: #000;
       color: #fff;
-      padding: 15px 20px;
+      padding: 16px 24px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -24,12 +24,17 @@
       top: 0;
       z-index: 1000;
     }
+    nav img.logo {
+      height: 40px;
+    }
     nav a {
       color: #fff;
-      margin-left: 20px;
+      margin-left: 24px;
       text-decoration: none;
       font-weight: 600;
+      transition: opacity 0.3s ease;
     }
+    nav a:hover { opacity: 0.8; }
     header, section, footer {
       padding: 60px 20px;
       max-width: 1200px;
@@ -37,22 +42,15 @@
     }
     header {
       text-align: center;
-      background: linear-gradient(120deg, #fff 0%, #f2f2f2 100%);
-      border-bottom: 1px solid #ddd;
-    }
-    .hero-img {
-      max-width: 100%;
-      margin-top: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      background: linear-gradient(120deg, #fff6e6 0%, #ffe8cc 100%);
     }
     h1, h2 {
       font-weight: 700;
       margin-bottom: 20px;
     }
     .lead {
-      font-size: 1.2em;
-      color: #555;
+      font-size: 1.3em;
+      color: #444;
     }
     .buttons {
       margin-top: 30px;
@@ -61,70 +59,94 @@
       display: inline-block;
       margin: 10px;
       padding: 14px 28px;
-      background: #000;
+      background: #d35400;
       color: #fff;
       text-decoration: none;
       border-radius: 6px;
       font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .buttons a:hover {
+      background: #c0392b;
+    }
+    .hero-video {
+      width: 100%;
+      margin-top: 30px;
+      border-radius: 16px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
     }
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
+      gap: 24px;
     }
     .gallery img {
       width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-      transition: transform 0.3s ease;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+      transition: transform 0.4s ease;
     }
     .gallery img:hover {
-      transform: scale(1.03);
+      transform: scale(1.05);
     }
-    .reviews blockquote {
+    blockquote {
       font-style: italic;
       margin-bottom: 30px;
-      border-left: 4px solid #ccc;
+      border-left: 4px solid #ffa500;
       padding-left: 14px;
-      color: #555;
+      background: #fff7e0;
+      padding: 14px;
+      border-radius: 6px;
+      color: #333;
     }
     form input, form textarea, form select {
       width: 100%;
-      margin: 10px 0;
-      padding: 12px;
-      border-radius: 4px;
+      margin: 12px 0;
+      padding: 14px;
+      border-radius: 6px;
       border: 1px solid #ccc;
       font-size: 1em;
     }
     form button {
-      padding: 12px 24px;
-      background: #000;
+      padding: 14px 28px;
+      background: #e67e22;
       color: #fff;
       border: none;
       border-radius: 6px;
       cursor: pointer;
       font-size: 1em;
+      transition: background 0.3s ease;
+    }
+    form button:hover {
+      background: #d35400;
     }
     footer {
-      background: #f8f8f8;
+      background: #fff3e0;
       font-size: 14px;
       text-align: center;
-      color: #666;
-      border-top: 1px solid #ddd;
+      color: #555;
+      border-top: 2px solid #ffd699;
       margin-top: 60px;
       padding: 40px 20px;
     }
     a[href^="tel:"], a[href^="mailto:"] {
-      color: #000;
+      color: #d35400;
       text-decoration: none;
       font-weight: bold;
+    }
+    .fade-in {
+      animation: fadeIn 1.2s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
 
 <nav>
-  <div><strong>Кухни Ассорти</strong></div>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Orange_dot.svg/1024px-Orange_dot.svg.png" alt="Логотип" class="logo">
   <div>
     <a href="#gallery">Примеры</a>
     <a href="#calc">Расчёт</a>
@@ -133,41 +155,41 @@
   </div>
 </nav>
 
-<header>
+<header class="fade-in">
   <h1>Индивидуальные кухни под заказ</h1>
-  <p class="lead">Инженерный подход. Честная цена. Екатеринбург</p>
-  <img class="hero-img" src="https://images.unsplash.com/photo-1595526114035-45b6a9d8d6d2" alt="Главная кухня">
+  <p class="lead">Проектирование с инженерным подходом. Качественно и без переплат</p>
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="https://cdn.coverr.co/videos/coverr-cooking-in-modern-kitchen-0470/1080p.mp4" type="video/mp4">
+    Ваш браузер не поддерживает видео.
+  </video>
   <div class="buttons">
     <a href="#calc">📐 Рассчитать кухню</a>
     <a href="https://wa.me/79826289024">💬 WhatsApp</a>
   </div>
 </header>
 
-<section id="gallery">
-  <h2>Наши проекты</h2>
+<section id="gallery" class="fade-in">
+  <h2>Примеры наших кухонь</h2>
   <div class="gallery">
-    <img src="https://images.unsplash.com/photo-1601979031925-5780fd524e4e" alt="кухня 1">
-    <img src="https://images.unsplash.com/photo-1613482184804-e7e2827cb5c2" alt="кухня 2">
-    <img src="https://images.unsplash.com/photo-1621947391907-fd9f0e6dba67" alt="кухня 3">
-    <img src="https://images.unsplash.com/photo-1618221199411-b62aef1d6c8e" alt="кухня 4">
-    <img src="https://images.unsplash.com/photo-1588854337221-c1525f8f60f5" alt="кухня 5">
-    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="кухня 6">
+    <img src="https://images.unsplash.com/photo-1588854337221-c1525f8f60f5" alt="кухня 1">
+    <img src="https://images.unsplash.com/photo-1618221199411-b62aef1d6c8e" alt="кухня 2">
+    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="кухня 3">
   </div>
 </section>
 
-<section>
+<section class="fade-in">
   <h2>Отзывы</h2>
-  <blockquote>«Очень понравилось, как всё чётко и грамотно рассчитано. Кухня не просто красивая, а удобная.» — Наталья</blockquote>
-  <blockquote>«Спасибо за честную цену, нормальное отношение и понятные сроки. Всё понравилось.» — Дмитрий</blockquote>
+  <blockquote>«Работа выполнена чётко и аккуратно. Кухня получилась современной и удобной!» — Анастасия</blockquote>
+  <blockquote>«Отличное качество материалов и внимательное отношение. Большое спасибо!» — Евгений</blockquote>
 </section>
 
-<section id="calc">
-  <h2>Рассчитать стоимость кухни</h2>
+<section id="calc" class="fade-in">
+  <h2>Онлайн-расчёт стоимости</h2>
   <form action="https://formspree.io/f/xqkrnjwk" method="POST">
     <label>Тип кухни:
       <select name="Тип кухни"><option>Прямая</option><option>Угловая</option><option>П-образная</option></select>
     </label>
-    <label>Размер (примерно):<input name="Размер" type="text" placeholder="например 2.5 x 3 м"></label>
+    <label>Размер:<input name="Размер" type="text" placeholder="например 2.5 x 3 м"></label>
     <label>Фасады:<select name="Фасады"><option>Матовые</option><option>Глянец</option><option>Пластик</option></select></label>
     <label>Телефон:<input name="Телефон" type="tel" placeholder="+7..." required></label>
     <label>Комментарий:<textarea name="Комментарий" placeholder="Опишите ваши пожелания..."></textarea></label>
@@ -175,9 +197,9 @@
   </form>
 </section>
 
-<section id="about">
+<section id="about" class="fade-in">
   <h2>О нас</h2>
-  <p>Наша компания — это семейная мастерская с инженерным подходом. Мы не просто продаём кухни — мы проектируем решения, которые будут служить вам годами. Каждый проект — под размеры, под стиль жизни, под человека. Без переплат. С душой.</p>
+  <p>Кухни Ассорти — семейная мастерская, где кухни проектируются не просто как мебель, а как инженерное решение. Мы подбираем комплектацию, материалы и дизайн под вашу планировку и образ жизни.</p>
 </section>
 
 <footer id="contacts">
