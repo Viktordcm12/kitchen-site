@@ -7,9 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; }
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
       font-family: 'Montserrat', sans-serif;
@@ -37,9 +35,7 @@
       font-weight: 600;
       transition: opacity 0.3s ease;
     }
-    nav a:hover {
-      opacity: 0.8;
-    }
+    nav a:hover { opacity: 0.8; }
     header, section, footer {
       padding: 60px 20px;
       max-width: 1200px;
@@ -94,6 +90,25 @@
     .gallery img:hover {
       transform: scale(1.05);
     }
+    .cta-block {
+      background: #fffaed;
+      padding: 40px 20px;
+      margin: 60px auto;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+    .cta-block h2 {
+      margin-bottom: 16px;
+    }
+    .cta-block a {
+      background: #ff6600;
+      color: #fff;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+    }
     footer {
       background: #fff3e0;
       font-size: 14px;
@@ -147,6 +162,12 @@
   <h2>О нас</h2>
   <p>Мы — семейная компания из Екатеринбурга, которая проектирует кухни на заказ с инженерной точностью. Наши преимущества: индивидуальный подход, честная цена и качество, проверенное годами. У нас нет переплат, как у шоурумов — кухни собирает и устанавливает наш мастер с 20-летним опытом.</p>
 </section>
+
+<div class="cta-block">
+  <h2>Хотите расчёт стоимости кухни?</h2>
+  <p>Оставьте заявку — и мы свяжемся с вами в течение дня</p>
+  <a href="mailto:assorti-ekb@bk.ru?subject=Расчёт кухни">Получить расчёт</a>
+</div>
 
 <footer id="contacts">
   <p>© 2025 Кухни Ассорти</p>
