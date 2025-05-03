@@ -7,6 +7,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; }
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       margin: 0;
       font-family: 'Montserrat', sans-serif;
@@ -14,7 +17,7 @@
       color: #222;
     }
     nav {
-      background: #000;
+      background: linear-gradient(90deg, #ff6600, #ff9900);
       color: #fff;
       padding: 16px 24px;
       display: flex;
@@ -34,7 +37,9 @@
       font-weight: 600;
       transition: opacity 0.3s ease;
     }
-    nav a:hover { opacity: 0.8; }
+    nav a:hover {
+      opacity: 0.8;
+    }
     header, section, footer {
       padding: 60px 20px;
       max-width: 1200px;
@@ -110,7 +115,7 @@
 <nav>
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Orange_dot.svg/1024px-Orange_dot.svg.png" alt="Логотип" class="logo">
   <div>
-    <a href="#portfolio">Альбом</a>
+    <a href="#portfolio">Примеры</a>
     <a href="#about">О нас</a>
     <a href="#contacts">Контакты</a>
   </div>
@@ -121,33 +126,33 @@
   <p class="lead">Индивидуальный подход, инженерная точность и душевный дизайн</p>
   <img class="hero-img" src="https://images.unsplash.com/photo-1595526114035-45b6a9d8d6d2" alt="Кухня">
   <div class="buttons">
-    <a href="#portfolio">📷 Смотреть примеры</a>
+    <a href="#portfolio">📷 Смотреть фотоальбом</a>
     <a href="https://wa.me/79826289024">💬 WhatsApp</a>
   </div>
 </header>
 
 <section id="portfolio">
-  <h2>Фотоальбом: выполненные проекты</h2>
+  <h2>Фотоальбом: наши кухни</h2>
   <div class="gallery">
-    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Пример кухни 1">
-    <img src="https://images.unsplash.com/photo-1588854337221-c1525f8f60f5" alt="Пример кухни 2">
-    <img src="https://images.unsplash.com/photo-1618221199411-b62aef1d6c8e" alt="Пример кухни 3">
-    <img src="https://images.unsplash.com/photo-1613482184804-e7e2827cb5c2" alt="Пример кухни 4">
-    <img src="https://images.unsplash.com/photo-1601979031925-5780fd524e4e" alt="Пример кухни 5">
-    <img src="https://images.unsplash.com/photo-1621947391907-fd9f0e6dba67" alt="Пример кухни 6">
+    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Кухня 1">
+    <img src="https://images.unsplash.com/photo-1588854337221-c1525f8f60f5" alt="Кухня 2">
+    <img src="https://images.unsplash.com/photo-1618221199411-b62aef1d6c8e" alt="Кухня 3">
+    <img src="https://images.unsplash.com/photo-1613482184804-e7e2827cb5c2" alt="Кухня 4">
+    <img src="https://images.unsplash.com/photo-1601979031925-5780fd524e4e" alt="Кухня 5">
+    <img src="https://images.unsplash.com/photo-1621947391907-fd9f0e6dba67" alt="Кухня 6">
   </div>
 </section>
 
 <section id="about">
   <h2>О нас</h2>
-  <p>Мы — семейная компания в Екатеринбурге. Наше главное отличие — инженерный подход и честная цена. Проектируем кухни под любые планировки, с гарантией качества и без переплаты за бренд.</p>
+  <p>Мы — семейная компания из Екатеринбурга, которая проектирует кухни на заказ с инженерной точностью. Наши преимущества: индивидуальный подход, честная цена и качество, проверенное годами. У нас нет переплат, как у шоурумов — кухни собирает и устанавливает наш мастер с 20-летним опытом.</p>
 </section>
 
 <footer id="contacts">
   <p>© 2025 Кухни Ассорти</p>
   <p>Телефон: <a href="tel:+79826289024">+7 (982) 628-90-24</a></p>
   <p>Email: <a href="mailto:assorti-ekb@bk.ru">assorti-ekb@bk.ru</a></p>
-  <p>ТЦ «Гулливер», Екатеринбург</p>
+  <p>Адрес: ТЦ «Гулливер», Екатеринбург</p>
 </footer>
 
 </body>
