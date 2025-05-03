@@ -69,7 +69,7 @@
     .buttons a:hover {
       background: #c0392b;
     }
-    .hero-video {
+    .hero-img {
       width: 100%;
       margin-top: 30px;
       border-radius: 16px;
@@ -89,37 +89,6 @@
     .gallery img:hover {
       transform: scale(1.05);
     }
-    blockquote {
-      font-style: italic;
-      margin-bottom: 30px;
-      border-left: 4px solid #ffa500;
-      padding-left: 14px;
-      background: #fff7e0;
-      padding: 14px;
-      border-radius: 6px;
-      color: #333;
-    }
-    form input, form textarea, form select {
-      width: 100%;
-      margin: 12px 0;
-      padding: 14px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      font-size: 1em;
-    }
-    form button {
-      padding: 14px 28px;
-      background: #e67e22;
-      color: #fff;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 1em;
-      transition: background 0.3s ease;
-    }
-    form button:hover {
-      background: #d35400;
-    }
     footer {
       background: #fff3e0;
       font-size: 14px;
@@ -134,13 +103,6 @@
       text-decoration: none;
       font-weight: bold;
     }
-    .fade-in {
-      animation: fadeIn 1.2s ease;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
   </style>
 </head>
 <body>
@@ -148,65 +110,44 @@
 <nav>
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Orange_dot.svg/1024px-Orange_dot.svg.png" alt="Логотип" class="logo">
   <div>
-    <a href="#gallery">Примеры</a>
-    <a href="#calc">Расчёт</a>
+    <a href="#portfolio">Альбом</a>
     <a href="#about">О нас</a>
     <a href="#contacts">Контакты</a>
   </div>
 </nav>
 
-<header class="fade-in">
-  <h1>Индивидуальные кухни под заказ</h1>
-  <p class="lead">Проектирование с инженерным подходом. Качественно и без переплат</p>
-  <video class="hero-video" autoplay muted loop playsinline>
-    <source src="https://cdn.coverr.co/videos/coverr-cooking-in-modern-kitchen-0470/1080p.mp4" type="video/mp4">
-    Ваш браузер не поддерживает видео.
-  </video>
+<header>
+  <h1>Кухни под заказ в Екатеринбурге</h1>
+  <p class="lead">Индивидуальный подход, инженерная точность и душевный дизайн</p>
+  <img class="hero-img" src="https://images.unsplash.com/photo-1595526114035-45b6a9d8d6d2" alt="Кухня">
   <div class="buttons">
-    <a href="#calc">📐 Рассчитать кухню</a>
+    <a href="#portfolio">📷 Смотреть примеры</a>
     <a href="https://wa.me/79826289024">💬 WhatsApp</a>
   </div>
 </header>
 
-<section id="gallery" class="fade-in">
-  <h2>Примеры наших кухонь</h2>
+<section id="portfolio">
+  <h2>Фотоальбом: выполненные проекты</h2>
   <div class="gallery">
-    <img src="https://images.unsplash.com/photo-1588854337221-c1525f8f60f5" alt="кухня 1">
-    <img src="https://images.unsplash.com/photo-1618221199411-b62aef1d6c8e" alt="кухня 2">
-    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="кухня 3">
+    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Пример кухни 1">
+    <img src="https://images.unsplash.com/photo-1588854337221-c1525f8f60f5" alt="Пример кухни 2">
+    <img src="https://images.unsplash.com/photo-1618221199411-b62aef1d6c8e" alt="Пример кухни 3">
+    <img src="https://images.unsplash.com/photo-1613482184804-e7e2827cb5c2" alt="Пример кухни 4">
+    <img src="https://images.unsplash.com/photo-1601979031925-5780fd524e4e" alt="Пример кухни 5">
+    <img src="https://images.unsplash.com/photo-1621947391907-fd9f0e6dba67" alt="Пример кухни 6">
   </div>
 </section>
 
-<section class="fade-in">
-  <h2>Отзывы</h2>
-  <blockquote>«Работа выполнена чётко и аккуратно. Кухня получилась современной и удобной!» — Анастасия</blockquote>
-  <blockquote>«Отличное качество материалов и внимательное отношение. Большое спасибо!» — Евгений</blockquote>
-</section>
-
-<section id="calc" class="fade-in">
-  <h2>Онлайн-расчёт стоимости</h2>
-  <form action="https://formspree.io/f/xqkrnjwk" method="POST">
-    <label>Тип кухни:
-      <select name="Тип кухни"><option>Прямая</option><option>Угловая</option><option>П-образная</option></select>
-    </label>
-    <label>Размер:<input name="Размер" type="text" placeholder="например 2.5 x 3 м"></label>
-    <label>Фасады:<select name="Фасады"><option>Матовые</option><option>Глянец</option><option>Пластик</option></select></label>
-    <label>Телефон:<input name="Телефон" type="tel" placeholder="+7..." required></label>
-    <label>Комментарий:<textarea name="Комментарий" placeholder="Опишите ваши пожелания..."></textarea></label>
-    <button type="submit">Получить расчёт</button>
-  </form>
-</section>
-
-<section id="about" class="fade-in">
+<section id="about">
   <h2>О нас</h2>
-  <p>Кухни Ассорти — семейная мастерская, где кухни проектируются не просто как мебель, а как инженерное решение. Мы подбираем комплектацию, материалы и дизайн под вашу планировку и образ жизни.</p>
+  <p>Мы — семейная компания в Екатеринбурге. Наше главное отличие — инженерный подход и честная цена. Проектируем кухни под любые планировки, с гарантией качества и без переплаты за бренд.</p>
 </section>
 
 <footer id="contacts">
   <p>© 2025 Кухни Ассорти</p>
   <p>Телефон: <a href="tel:+79826289024">+7 (982) 628-90-24</a></p>
   <p>Email: <a href="mailto:assorti-ekb@bk.ru">assorti-ekb@bk.ru</a></p>
-  <p>Адрес: ТЦ «Гулливер», Екатеринбург</p>
+  <p>ТЦ «Гулливер», Екатеринбург</p>
 </footer>
 
 </body>
